@@ -28,7 +28,7 @@ shinyUI(fluidPage(
       numericInput("Number",
                   "Number of samples in each group", 20),
       numericInput("Length",
-                  "Length of Wavenumber", value = 3000),
+                  "Length of Wavenumber", value = 3067),
       
       selectInput("panel1", "Plot:",
                   list("Average" = "1", 
