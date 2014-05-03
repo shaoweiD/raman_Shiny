@@ -66,9 +66,10 @@ shinyServer(function(input, output) {
     
   output$downloadData <- downloadHandler(  
     
-    filename ="PCA.csv",
-    
-    # This function should write data to a file given to it by
+    filename = function() {
+      paste("PCA", input$file1, sep = ".")
+    },
+     # This function should write data to a file given to it by
     # the argument 'file'.
     content = function(file) {
       inFile <- input$file1
@@ -85,6 +86,3 @@ shinyServer(function(input, output) {
     
   )
 })
-
-
-
